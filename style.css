@@ -1,0 +1,191 @@
+*{
+    box-sizing: border-box;
+    text-transform: capitalize;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(48, 48, 48);
+    overflow: hidden;
+}
+#main{
+    height: 600px;
+    width: 400px;
+    border-radius: 20px;
+    background-color:#15253d;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 20px 15px rgb(62, 62, 62);
+    #üst{
+        width: 100%;
+        background-color:#15253d;
+        border-radius: 20px;
+        text-transform: capitalize;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        #kayit_alan{
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            opacity: 0%;
+            color: white;
+            height: 80%;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            input{
+                height: 45px;
+                width: 220px;
+                background: none;
+                color: white;
+                border: none;
+                border-bottom:2px solid white;
+                border-radius: 5px;
+                padding-left: 15px;
+                transition: all 1s;
+                &:focus{
+                    border:2px solid white;
+                }
+            }
+        }
+    }
+    #alt{
+        width: 100%;
+        background-color:#7c9bdb;
+        border-radius: 60px 60px 20px 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        #giris_alan{
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            opacity: 0;
+            color: black;
+            height: 80%;
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            gap: 20px;
+            input{
+                height: 45px;
+                width: 220px;
+                background: none;
+                color:black;
+                border: none;
+                border-bottom:2px solid black;
+                border-radius: 5px;
+                padding-left: 15px;
+                transition: all 1s;
+                &:focus{
+                    border:2px solid black;
+                }
+            }
+        }
+    }
+}
+.alan{
+    transition: all 1s;
+}
+input::placeholder{
+    color: white;
+}
+#giris_alan input::placeholder{
+    color: black;
+}
+
+#giris_alan,#kayit_alan{
+    animation: hareketlenme 0.5s linear 0.7s forwards;
+}
+
+@keyframes hareketlenme {
+    0%{
+        top: 30%;
+        opacity: 0;
+    }100%{
+        top: 50%;
+        opacity: 1;
+    }
+}
+/**/
+.gnl_btn {
+    font-size: 18px;
+    color: #e1e1e1;
+    font-family: inherit;
+    font-weight: 800;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+  }
+  
+  .gnl_btn:focus,
+  .gnl_btn:hover {
+    color: #fff;
+  }
+  
+  .gnl_btn:focus:after,
+  .gnl_btn:hover:after {
+    width: 100%;
+    left: 0%;
+  }
+  
+  .gnl_btn:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
+  }
+/**/
+/**/
+.grskyt{
+    width: 230px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background-color: #7c9bdb;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 10px 0px #0c5c9a;
+    transition: box-shadow 0.5s ease-in;
+}
+#ozel{
+    background-color: #15253d;
+    box-shadow: 0px 0px 10px 0px #004a83;
+}
+.grskyt:hover{
+    box-shadow: 0px 0px 10px 7px #0c5c9a;
+}
+#ozel:hover{
+    box-shadow: 0px 0px 10px 7px #004a83;
+}
+/**/
